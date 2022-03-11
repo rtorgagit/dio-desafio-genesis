@@ -22,14 +22,13 @@ let shuffleOrder = async () => {
 
   for (let i in order) {
     let elementColor = createColorElement(order[i]);
-    ligthColor(elementColor, Number(i) + 1);
+    ligthColor(elementColor);
     await delay(1);
   }
 }
 
 
-let ligthColor = async (element, number) => {
-  number = number * 500;
+let ligthColor = async (element) => {
   element.classList.add('selected');
   await delay(0.5);
   element.classList.remove('selected');
